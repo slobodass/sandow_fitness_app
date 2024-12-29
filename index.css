@@ -16,7 +16,6 @@ html{
 
 
 .page{
-    border: 3px red solid;
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
@@ -166,3 +165,36 @@ body {
 .why-us__item-text{
     margin-top: 15px;
 }
+
+.trainers__item{
+    width: 560px;
+    
+}
+
+.trainers__images-wrapper {
+    position: relative;
+}
+
+.trainers__img {
+    width: 100%;
+}
+
+.trainers__logo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+}
+
+.trainers__trainer-name{
+    font-size: 64px;
+    color: gold;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    outline: 3px green solid;
+    display: inline-block;
+    width: 350px;
+}   
+
+/* text-align: center; */

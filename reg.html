@@ -17,11 +17,11 @@
         
         <div class="form" id="login-form">
         <h2>Войти в аккаунт</h2>
-        <form action="#" method="POST">
+        <form class="form-auth" action="#" method="POST">
             <label for="login-email">Электронная почта или номер телефона</label>
-            <input type="email" id="login-email" name="email" required>
+            <input class="auth-email" type="email" id="login-email" name="email" required>
             <label for="login-password">Пароль</label>
-            <input type="password" id="login-password" name="password" required>
+            <input class="auth-password" type="password" id="login-password" name="password" required>
             <button type="submit">Войти</button>
         </form>
         </div>
@@ -29,30 +29,88 @@
         
         <div class="form" id="register-form">
         <h2>Создать аккаунт</h2>
-        <form action="#" method="POST">
-            <label for="register-email">Электронная почта или номер телефона</label>
+        <form class="form-registration" action="#" method="POST">
+            <label for="register-email">Электронная почта</label>
             <input type="email" id="register-email" name="email" required>
             <label for="register-password">Пароль</label>
+            
             <input type="password" id="register-password" name="password" required>
-            <label for="register-confirm-password">Повторите пароль</label>
-            <input type="password" id="register-confirm-password" name="confirm-password" required>
-            <button type="submit">Зарегистрироваться</button>
+            <!-- <label for="register-confirm-password">Повторите пароль</label>
+            <input type="password" id="register-confirm-password" name="confirm-password" required> -->
+            <button class="button" type="submit">Зарегистрироваться</button>
         </form>
         </div>
     </div>
 
-    <script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
+    const firebaseConfig = {
+      apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",
+      authDomain: "sf-app-database.firebaseapp.com",
+      projectId: "sf-app-database",
+      storageBucket: "sf-app-database.firebasestorage.app",
+      messagingSenderId: "135936952195",
+      appId: "1:135936952195:web:f6cdbf9d06143a532858b6"
+    };
+    
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+  
     
         const loginTab = document.getElementById('login-tab');
         const registerTab = document.getElementById('register-tab');
         const loginForm = document.getElementById('login-form');
         const registerForm = document.getElementById('register-form');
+        const formRegistration = document.querySelector('.form-registration')
+        const registerEmail = document.querySelector('#register-email')
+        const registerPassword = document.querySelector('#register-password')
+        const formAuth = document.querySelector('.form-auth')
+        const authEmail = document.querySelector('.auth-email')
+        const authPassword = document.querySelector('.auth-password')
+        
+        
+        
+    formRegistration.addEventListener('submit', async function(event){
+        event.preventDefault()
+        const email = registerEmail.value;
+        const password = registerPassword.value;
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+            console.log('Регистрация прошла успешно');
+        } catch(error) {
+            console.error('Ошибка регистрации: ', error)
+        }
+    })
 
+    formAuth.addEventListener('submit', async function (event) {
+        event.preventDefault()
+        const email = authEmail.value;
+        const password = authPassword.value;
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password)
+            console.log ('Вход прошел успешно!');
+            window.location.href = "index.html"
+        } catch(error) {
+            console.error('Ошибка входа: ', error)
+        }
+    })
+
+    
+
+        // click - обработчик событий
         loginTab.addEventListener('click', () => {
-        loginTab.classList.add('active');
-        registerTab.classList.remove('active');
-        loginForm.style.display = 'block';
-        registerForm.style.display = 'none';
+            loginTab.classList.add('active');
+            // active - изменение цвета эл-та
+            registerTab.classList.remove('active'); 
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
         });
 
         registerTab.addEventListener('click', () => {
@@ -62,5 +120,7 @@
         registerForm.style.display = 'block';
         });
     </script>
+
+
     </body>
     </html>
