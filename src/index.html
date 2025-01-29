@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandow Fitness App</title>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <div class="page">
-        
+    <div class="page" id="page">
+
         <header class="header">
             <nav class="header__nav">
                 <a href="#" class="header__logo">SANDOW</a>
@@ -19,13 +19,13 @@
                 <div class="header__links">
                     <ul class="header__list">
                         <li>
-                            <a class="header__link" href="#">Главная</a>
+                            <a class="header__link" href="#page">Главная</a>
                         </li>
                         <li>
                             <a class="header__link" href="#why-us">О нас</a>
                         </li>
                         <li>
-                            <a class="header__link" href="#">Тренеры</a>
+                            <a class="header__link"  href="#trainers">Тренеры</a>
                         </li>
                         <li>
                             <a class="header__link" href="#">Профиль</a>
@@ -49,7 +49,9 @@
                     alt="">
             </section>
             <section class="why-us" id="why-us">
-                <img class="why-us__pic" src="https://optim.tildacdn.com/tild3363-3533-4039-b135-653163383564/-/format/webp/old_img_sandow.png" alt="">
+                <img class="why-us__pic"
+                    src="https://optim.tildacdn.com/tild3363-3533-4039-b135-653163383564/-/format/webp/old_img_sandow.png"
+                    alt="">
                 <div class="why-us__wrapper">
                     <h2 class="why-us__wrapper-text">Почему выбирают нас</h2>
 
@@ -58,32 +60,44 @@
 
 
                             <li class="why-us__item">
-                                <img class="why-us__item-img" src="https://static.tildacdn.com/tild3133-6235-4138-a631-623735336633/clock.svg" alt="">
+                                <img class="why-us__item-img"
+                                    src="https://static.tildacdn.com/tild3133-6235-4138-a631-623735336633/clock.svg"
+                                    alt="">
                                 <p class="why-us__item-text">Круглосуточно</p>
                             </li>
 
                             <li class="why-us__item">
-                                <img class="why-us__item-img" src="https://static.tildacdn.com/tild6433-3561-4732-a235-353434376633/Gym.svg" alt="">
+                                <img class="why-us__item-img"
+                                    src="https://static.tildacdn.com/tild6433-3561-4732-a235-353434376633/Gym.svg"
+                                    alt="">
                                 <p class="why-us__item-text">Тренажерный зал 1000 кв/м</p>
                             </li>
 
                             <li class="why-us__item">
-                                <img class="why-us__item-img" src="https://static.tildacdn.com/tild3035-3138-4063-a663-333238303833/Stationery_Bike.svg" alt="">
+                                <img class="why-us__item-img"
+                                    src="https://static.tildacdn.com/tild3035-3138-4063-a663-333238303833/Stationery_Bike.svg"
+                                    alt="">
                                 <p class="why-us__item-text">200+ ед тренажеров</p>
                             </li>
 
                             <li class="why-us__item">
-                                <img class="why-us__item-img" src="https://static.tildacdn.com/tild3330-6138-4236-a564-626539353161/parking_location.svg" alt="">
+                                <img class="why-us__item-img"
+                                    src="https://static.tildacdn.com/tild3330-6138-4236-a564-626539353161/parking_location.svg"
+                                    alt="">
                                 <p class="why-us__item-text">Охраняемая парковка</p>
                             </li>
 
                             <li class="why-us__item">
-                                <img class="why-us__item-img" src="https://static.tildacdn.com/tild6665-3564-4233-a562-373034666664/pulse_measurement.svg" alt="">
+                                <img class="why-us__item-img"
+                                    src="https://static.tildacdn.com/tild6665-3564-4233-a562-373034666664/pulse_measurement.svg"
+                                    alt="">
                                 <p class="why-us__item-text">Кардиокинотеатр</p>
                             </li>
 
                             <li class="why-us__item">
-                                <img class="why-us__item-img" src="https://static.tildacdn.com/tild3263-3432-4430-b862-353830646164/Bath_Robe.svg" alt="">
+                                <img class="why-us__item-img"
+                                    src="https://static.tildacdn.com/tild3263-3432-4430-b862-353830646164/Bath_Robe.svg"
+                                    alt="">
                                 <p class="why-us__item-text">Настоящая парилка</p>
                             </li>
                         </ul>
@@ -91,29 +105,113 @@
                 </div>
             </section>
 
-            <section class="trainers">
-                <h2>Тренеры</h2>
+            <section class="trainers" id="trainers">
+                <h2 class="trainers__title">Тренеры</h2>
                 <ul class="trainers__list">
                     <li class="trainers__item">
-                        <div class="trainers__images-wrapper">
-                            <img class="trainers__img" src="https://optim.tildacdn.com/tild6265-6334-4936-a234-633139313331/-/format/webp/PozhilovaN.jpg" alt="">
-                            <img class="trainers__logo" src="https://static.tildacdn.com/tild3162-6639-4462-b533-356431363365/Braslety_Sandow_01.svg" alt="">
-                            <h3 class="trainers__trainer-name">Пожилова Наталья</h3>
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
                         </div>
-                        <div class="trainers__trainer-info">
-                            <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
-                            <p class="trainers__trainer-preview">Фитнес эксперт. Тренер ГП</p>
-                            <p class="trainers__trainer-discription">КМС по легкой атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры, выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                    </li>
+
+                    <li class="trainers__item">
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
                         </div>
-                    </li>                    
+                    </li>
+
+                    <li class="trainers__item">
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="trainers__item">
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="trainers__item">
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="trainers__item">
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="trainers__item">
+                        <div class="trainer__card">
+                            <div class="trainers__trainer-info"> 
+                                <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                <p class="trainers__trainer-discription">Фитнес эксперт. Тренер ГП. КМС по легкой
+                                    атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры,
+                                    выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным
+                                    аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </section>
             
+            <section class="trainings">
+                <h2 class="trainings__title">Групповые программы</h2>
+                <p class="trainings__subtitle">Выбери свое Направление</p>
+                <ul class="trainings__list">
+                    <li class="trainings__item">
+                        <div class="trainings__card">
+                            <!-- <img class="trainings__card-img" src="https://optim.tildacdn.com/tild3533-6539-4462-a231-306361313430/-/resize/776x/-/format/webp/g1.png" alt=""> -->
+                            <h3 class="trainings__card-text">Йога</h3>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
 
         </main>
-        
+
     </div>
 
-</body> 
+</body>
 
 </html>
