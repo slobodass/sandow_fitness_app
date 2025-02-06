@@ -26,6 +26,7 @@ html{
     position: fixed;
     background-color: #000;
     width: 100%;
+    z-index: 100;
 }
 
 .header__links {
@@ -240,15 +241,123 @@ body {
     list-style: none;
 }
 
-.trainings__card{
-    position: relative;
-    background-image: url(https://optim.tildacdn.com/tild3533-6539-4462-a231-306361313430/-/resize/776x/-/format/webp/g1.png);
-    width: 390px;
-    height: 244px;
-}
-
 .trainings__card-text{
     position: absolute;
     top: 50px;
     left: 50px;
+}
+
+
+.trainings__card{
+    position: relative;
+    width: 390px;
+    height: 244px;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+
+.trainings__list{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    outline: 3px red solid;
+    max-width: 840px;
+}
+
+
+.trainings__card1 {
+    background-image: url(https://optim.tildacdn.com/tild3533-6539-4462-a231-306361313430/-/resize/776x/-/format/webp/g1.png);
+}
+
+
+
+.trainings__card2{
+    background-image: url(https://optim.tildacdn.com/tild6438-3936-4265-b137-623762643066/-/resize/768x/-/format/webp/g2.png);
+}
+
+.trainings__card3{
+    background-image: url(https://optim.tildacdn.com/tild6335-6530-4330-b039-633835336330/-/resize/780x/-/format/webp/g3.png);
+    
+}
+
+.trainings__card4{
+    background-image: url(https://optim.tildacdn.com/tild6239-6134-4130-b836-346338636665/-/resize/784x/-/format/webp/g4.png);
+    
+}
+.trainings__card5{
+    background-image: url(https://optim.tildacdn.com/tild6139-3136-4464-b664-663338393062/-/resize/788x/-/format/webp/g5.png);
+    
+}
+.trainings__card6{
+    background-image: url(https://optim.tildacdn.com/tild3031-3261-4335-a662-343465346239/-/resize/762x/-/format/webp/g6.png);
+    
+}
+.trainings__card7{
+    background-image: url(https://optim.tildacdn.com/tild3830-3339-4062-b335-373461353431/-/resize/812x/-/format/webp/g2137.png);
+    
+}
+.trainings__card8{
+    background-image: url(https://optim.tildacdn.com/tild6231-3833-4232-b438-643763616264/-/resize/812x/-/format/webp/g72121.png);
+    
+}
+.trainings__card9{
+    background-image: url(https://optim.tildacdn.com/tild6362-6232-4534-b430-616230303763/-/resize/720x/-/format/webp/g11.png);    
+}
+
+.modal{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 120;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.modal_content{
+    background-color: #151515;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 40%;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.7s ease;
+}
+
+.modal_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_active .modal_content{
+    transform: translateY(0);
+}
+
+.modal_button{
+    border-radius: 8px;
+    background-color: gold;
+    color: #151515;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.modal_title{
+    font-size: 30px;
+    margin-bottom: 26px;
+}
+
+.modal_text{
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
 }
