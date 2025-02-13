@@ -361,9 +361,6 @@ body {
 
 
 
-
-
-
 .footer{
     display: flex;
     flex-direction: column;
@@ -411,6 +408,11 @@ body {
     font-size: 12px;
     opacity: 0.7;
 }
+
+.footer__adress-pic{
+    width: 30px;    
+}
+
 
 .footer_navigation-item{
     opacity: 0.7;
