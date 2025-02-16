@@ -1,4 +1,9 @@
 import "../index.css"
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
 const trainingsCards = document.querySelectorAll('.trainings__item')
 const trainingsModal = document.querySelector('.modal')
 const modalCloseButton = document.querySelector('.modal__button-close')
@@ -63,7 +68,25 @@ trainingsModal.addEventListener('click', (event) => {
     if (event.target === trainingsModal) {
         trainingsModal.classList.remove('modal_active')
     }
+
 })
 
-
-
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        }, 
+        640: {
+            slidesPerView: 2, 
+            spaceBetween: 20, 
+        },
+        1024: {
+            slidesPerView: 3, 
+            spaceBetween: 30, 
+        }
+    }
+});

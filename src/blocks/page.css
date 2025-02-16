@@ -210,7 +210,6 @@ body {
     display: flex;
     flex-direction:column;
     justify-content: end;
-
 }
 
 .trainers__trainer-info{
@@ -434,4 +433,8 @@ body {
     opacity: 0.6;
     padding: 20px 0px;
     font-size: 14px;
+}
+
+.trainers{
+    overflow: hidden;
 }
